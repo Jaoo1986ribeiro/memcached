@@ -1,0 +1,15 @@
+install memcached: sudo apt instal memcached
+check the process of the server: ps -ef | grep memcache
+enter memcached: telnet localhost port(11211)
+stats of the server: stats
+set a value(overwrites if the key is set to another value): set (key) (flags) (time_to_live(in seconds)) (allocated_bytes(int))
+get value: get (key)
+add value(to a key that has no value on it): add (key) (flags) (ttl(seconds)) (bytes(int))
+add a value at the end of a presetted value: append (key) (flags) (ttl) (bites)
+add a value at the begining of a presetted value: prepend (key) (flags) (ttl) (bytes)
+delete a value by the key: delete (key)
+replace a value: replace (key) (flags) (ttl) (bytes)
+increment a value: incr (key) (value to be added)
+decrement a value: incr (key) (value to be subtracted)
+clear from cache(keep the history information): flush_all
+clear all: quit (on the terminal: sudo service memcached restart)
